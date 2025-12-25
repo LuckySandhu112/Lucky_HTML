@@ -1,9 +1,290 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>HTML Introduction</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RoyalBites | Vibrant Food World</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <p>Welcome to HTML course.</p>
+
+    <header>
+        <nav class="navbar">
+            <h1 class="logo">Royal<span>Bites</span></h1>
+            <ul class="nav-links">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#categories">Menu</a></li>
+                <li><a href="#restaurants">Places</a></li>
+                <li><a href="#atmosphere">Vibes</a></li>
+                <li><button class="btn-cart"><i class="fas fa-shopping-bag"></i> Cart (₹0)</button></li>
+            </ul>
+            <div class="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>A World of Flavor on Your Plate</h1>
+            <p>Experience the most vibrant cuisines and royal dining experiences near you.</p>
+            <div class="search-box-container">
+                <div class="search-box">
+                    <i class="fas fa-search search-icon"></i>
+                    <input type="text" placeholder="Search for Butter Chicken, Sushi, or Vibes...">
+                    <button>Find Food</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="categories" class="container section-cream">
+        <h3 class="section-title">Explore Vibrant Categories</h3>
+        <div class="category-grid">
+            <div class="cat-item c-pizza"><i class="fas fa-pizza-slice"></i><p>Pizza</p></div>
+            <div class="cat-item c-burger"><i class="fas fa-hamburger"></i><p>Burgers</p></div>
+            <div class="cat-item c-indian"><i class="fas fa-bowl-food"></i><p>Indian</p></div>
+            <div class="cat-item c-asian"><i class="fas fa-fish"></i><p>Asian</p></div>
+            <div class="cat-item c-dessert"><i class="fas fa-ice-cream"></i><p>Desserts</p></div>
+            <div class="cat-item c-drinks"><i class="fas fa-cocktail"></i><p>Drinks</p></div>
+        </div>
+    </section>
+
+    <section id="restaurants" class="container section-white">
+        <h3 class="section-title">Iconic Restaurants</h3>
+        <div class="grid restaurant-grid">
+            <div class="card rest-card">
+                <div class="img-holder">
+                    <img src="https://images.unsplash.com/photo-1578474846511-04ba529f0b88?w=600&q=80" alt="The Azure Palace Restaurant">
+                    <span class="discount-tag">Flat 20% OFF</span>
+                </div>
+                <div class="card-info">
+                    <div class="rest-header">
+                        <h4>The Azure Palace</h4>
+                        <span class="rating-badge"><i class="fas fa-star"></i> 4.9</span>
+                    </div>
+                    <p class="cuisine-type">Fine Dining • Italian & Continental</p>
+                    <div class="rest-footer">
+                        <span>₹1200 for two</span>
+                        <span>30-40 min</span>
+                    </div>
+                </div>
+            </div>
+            <div class="card rest-card">
+                 <div class="img-holder">
+                    <img src="https://images.unsplash.com/photo-1545231027-637d2f6210f8?w=600&q=80" alt="Spice Symphony Restaurant">
+                </div>
+                <div class="card-info">
+                    <div class="rest-header">
+                        <h4>Spice Symphony</h4>
+                        <span class="rating-badge"><i class="fas fa-star"></i> 4.7</span>
+                    </div>
+                    <p class="cuisine-type">Authentic North Indian • Mughlai</p>
+                    <div class="rest-footer">
+                        <span>₹800 for two</span>
+                        <span>25-35 min</span>
+                    </div>
+                </div>
+            </div>
+            <div class="card rest-card">
+                 <div class="img-holder">
+                    <img src="https://images.unsplash.com/photo-1534234757579-857158551645?w=600&q=80" alt="Neon Bites Cafe">
+                    <span class="discount-tag">New Arrival</span>
+                </div>
+                <div class="card-info">
+                    <div class="rest-header">
+                        <h4>Neon Bites Cafe</h4>
+                        <span class="rating-badge"><i class="fas fa-star"></i> 4.5</span>
+                    </div>
+                    <p class="cuisine-type">Cafe • Burgers & Shakes</p>
+                    <div class="rest-footer">
+                        <span>₹500 for two</span>
+                        <span>20-30 min</span>
+                    </div>
+                </div>
+            </div>
+            <div class="card rest-card">
+                <div class="img-holder">
+                   <img src="https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?w=600&q=80" alt="Kyoto Clouds">
+                   <span class="discount-tag">Trending</span>
+               </div>
+               <div class="card-info">
+                   <div class="rest-header">
+                       <h4>Kyoto Clouds</h4>
+                       <span class="rating-badge"><i class="fas fa-star"></i> 4.8</span>
+                   </div>
+                   <p class="cuisine-type">Pan Asian • Sushi & Dimsum</p>
+                   <div class="rest-footer">
+                       <span>₹1500 for two</span>
+                       <span>35-45 min</span>
+                   </div>
+               </div>
+           </div>
+        </div>
+    </section>
+
+    <section class="promo-banner">
+        <div class="promo-visual">
+            <img src="https://images.unsplash.com/photo-1561758033-d89a9ad46330?w=600&q=80" alt="Colorful Burger Offer">
+        </div>
+        <div class="promo-content">
+            <span>EXPLOSION OF FLAVOR</span>
+            <h2>Weekend Royal Feast! Get 40% OFF</h2>
+            <p>Use Code: <strong>COLORFULLIFE</strong> on orders above ₹499.</p>
+            <button class="cta-btn">Claim Offer Now</button>
+        </div>
+    </section>
+
+    <section id="popular-food" class="container section-mint">
+        <h3 class="section-title">Trending Dishes</h3>
+        <div class="grid food-grid">
+            <div class="food-item">
+                <img src="https://images.unsplash.com/photo-1600891964092-4316c288032e?w=600&q=80" alt="Vibrant Steak">
+                <div class="food-details">
+                    <h5>Royal Sizzler Platter</h5>
+                    <p class="food-desc">Grilled meats with colorful veggies.</p>
+                    <div class="price-action">
+                        <p class="price">₹650</p>
+                        <button class="add-btn"><i class="fas fa-plus"></i> Add</button>
+                    </div>
+                </div>
+            </div>
+            <div class="food-item">
+                <img src="https://images.unsplash.com/photo-1571091718767-18b5b1457add?w=600&q=80" alt="Colorful Pizza">
+                <div class="food-details">
+                    <h5>Rainbow Veggie Pizza</h5>
+                    <p class="food-desc">Loaded with bell peppers and olives.</p>
+                    <div class="price-action">
+                        <p class="price">₹499</p>
+                        <button class="add-btn"><i class="fas fa-plus"></i> Add</button>
+                    </div>
+                </div>
+            </div>
+             <div class="food-item">
+                <img src="https://images.unsplash.com/photo-1606850780554-b55ea4830184?w=600&q=80" alt="Indian Curry">
+                <div class="food-details">
+                    <h5>Shahi Paneer Delight</h5>
+                    <p class="food-desc">Rich, creamy and colorful gravy.</p>
+                    <div class="price-action">
+                        <p class="price">₹380</p>
+                        <button class="add-btn"><i class="fas fa-plus"></i> Add</button>
+                    </div>
+                </div>
+            </div>
+            <div class="food-item">
+                <img src="https://images.unsplash.com/photo-1551024601-bec78aea704b?w=600&q=80" alt="Fancy Dessert">
+                <div class="food-details">
+                    <h5>Berry Bliss Sundae</h5>
+                    <p class="food-desc">An explosion of colorful berries.</p>
+                    <div class="price-action">
+                        <p class="price">₹250</p>
+                        <button class="add-btn"><i class="fas fa-plus"></i> Add</button>
+                    </div>
+                </div>
+            </div>
+            <div class="food-item">
+                <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=600&q=80" alt="Healthy Bowl">
+                <div class="food-details">
+                    <h5>Buddha Power Bowl</h5>
+                    <p class="food-desc">Healthy greens, avocado, and quinoa.</p>
+                    <div class="price-action">
+                        <p class="price">₹420</p>
+                        <button class="add-btn"><i class="fas fa-plus"></i> Add</button>
+                    </div>
+                </div>
+            </div>
+             <div class="food-item">
+                <img src="https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?w=600&q=80" alt="Spicy Tacos">
+                <div class="food-details">
+                    <h5>Fiesta Tacos (3pcs)</h5>
+                    <p class="food-desc">Spicy chicken with vibrant salsa.</p>
+                    <div class="price-action">
+                        <p class="price">₹350</p>
+                        <button class="add-btn"><i class="fas fa-plus"></i> Add</button>
+                    </div>
+                </div>
+            </div>
+             <div class="food-item">
+                <img src="https://images.unsplash.com/photo-1579871494447-9811cf80d66c?w=600&q=80" alt="Sushi Platter">
+                <div class="food-details">
+                    <h5>Dragon Sushi Roll</h5>
+                    <p class="food-desc">Premium salmon avocado rolls.</p>
+                    <div class="price-action">
+                        <p class="price">₹890</p>
+                        <button class="add-btn"><i class="fas fa-plus"></i> Add</button>
+                    </div>
+                </div>
+            </div>
+             <div class="food-item">
+                <img src="https://images.unsplash.com/photo-1563729768-020f114a2e40?w=600&q=80" alt="Colorful Macarons">
+                <div class="food-details">
+                    <h5>Assorted Macarons</h5>
+                    <p class="food-desc">A box of 6 colorful French treats.</p>
+                    <div class="price-action">
+                        <p class="price">₹300</p>
+                        <button class="add-btn"><i class="fas fa-plus"></i> Add</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="atmosphere" class="container section-white">
+        <h3 class="section-title">Royal Dining Experience</h3>
+        <p class="section-subtitle">See how people are enjoying their RoyalBites moments.</p>
+        
+        <div class="atmosphere-grid grid">
+            <div class="atmosphere-card tall">
+                <img src="https://images.unsplash.com/photo-1511690656952-34342d57a0f0?w=600&q=80" alt="People eating together">
+                <div class="atmos-overlay">
+                    <h4>Joyful Gatherings</h4>
+                </div>
+            </div>
+            <div class="atmosphere-card">
+                <img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?w=600&q=80" alt="Fine dining couple">
+                 <div class="atmos-overlay">
+                    <h4>Romantic Dates</h4>
+                </div>
+            </div>
+             <div class="atmosphere-card">
+                <img src="https://images.unsplash.com/photo-1573052903996-55297a24133e?w=600&q=80" alt="Friends laughing at restaurant">
+                 <div class="atmos-overlay">
+                    <h4>Friends & Flavor</h4>
+                </div>
+            </div>
+             <div class="atmosphere-card tall">
+                <img src="https://images.unsplash.com/photo-1529692236671-f1f6cf9683ba?w=600&q=80" alt="Family eating">
+                 <div class="atmos-overlay">
+                    <h4>Family Feasts</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-brand">
+                 <h2 class="logo">Royal<span>Bites</span></h2>
+                 <p>Bringing color and flavor to your life, one meal at a time.</p>
+                 <div class="socials">
+                     <i class="fab fa-instagram"></i>
+                     <i class="fab fa-facebook"></i>
+                     <i class="fab fa-twitter"></i>
+                 </div>
+            </div>
+             <div class="footer-links">
+                <h4>Company</h4>
+                <ul><li>About</li><li>Careers</li><li>Team</li></ul>
+            </div>
+             <div class="footer-links">
+                <h4>Contact</h4>
+                <ul><li>Help & Support</li><li>Partner with us</li><li>Ride with us</li></ul>
+            </div>
+        </div>
+        <p class="copyright">&copy; 2025 RoyalBites. Made with flavor.</p>
+    </footer>
+
 </body>
 </html>

@@ -1,0 +1,223 @@
+/* --- RoyalBites Vibrant Theme --- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+:root {
+    /* New Vibrant Palette */
+    --royal-blue: #0F172A;   /* Deep rich blue for headers */
+    --royal-accent: #3B82F6; /* Brighter blue for highlights */
+    --sunset-orange: #F97316; /* appetizing orange for buttons */
+    --gold-pop: #FACC15;      /* vibrant gold for stars/accents */
+    
+    /* Background Tones */
+    --bg-cream: #FFFBEB;      /* Warm background */
+    --bg-mint: #F0FDFA;       /* Fresh background */
+    --bg-white: #FFFFFF;
+
+    --text-dark: #1e293b;
+    --text-light: #64748b;
+}
+
+* {
+    margin: 0; padding: 0; box-sizing: border-box;
+    font-family: 'Poppins', sans-serif; scroll-behavior: smooth;
+}
+
+body { color: var(--text-dark); overflow-x: hidden; }
+
+/* Utility Classes for Section Backgrounds */
+.section-cream { background-color: var(--bg-cream); }
+.section-mint { background-color: var(--bg-mint); }
+.section-white { background-color: var(--bg-white); }
+
+/* --- Navbar --- */
+.navbar {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 1rem 5%; background: var(--royal-blue);
+    position: sticky; top: 0; z-index: 1000;
+    box-shadow: 0 4px 20px rgba(15, 23, 42, 0.2);
+}
+.logo { font-size: 1.8rem; color: white; font-weight: 700; }
+.logo span { color: var(--sunset-orange); }
+.nav-links { display: flex; list-style: none; align-items: center; }
+.nav-links li { margin-left: 2rem; }
+.nav-links a {
+    text-decoration: none; color: #cbd5e1; font-weight: 500; transition: 0.3s;
+    font-size: 0.95rem;
+}
+.nav-links a:hover, .nav-links a.active { color: var(--sunset-orange); }
+.btn-cart {
+    background: linear-gradient(135deg, var(--sunset-orange), #ea580c);
+    color: white; border: none; padding: 0.8rem 1.5rem; border-radius: 50px;
+    font-weight: 600; cursor: pointer; display: flex; align-items: center; gap: 8px;
+    box-shadow: 0 4px 15px rgba(249, 115, 22, 0.4); transition: 0.3s;
+}
+.btn-cart:hover { transform: translateY(-3px); box-shadow: 0 8px 25px rgba(249, 115, 22, 0.6); }
+.hamburger { display: none; color: white; font-size: 1.5rem; cursor: pointer; }
+
+/* --- Hero Section (Colorful & Big) --- */
+.hero {
+    height: 85vh; position: relative; display: flex; align-items: center; justify-content: center;
+    text-align: center; color: white; margin-top: -1px;
+    /* Using a vibrant, high-quality food spread image */
+    background: url('https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?w=1500&q=80') no-repeat center center/cover;
+}
+/* A colorful gradient overlay instead of boring black */
+.hero-overlay {
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+    background: linear-gradient(135deg, rgba(15, 23, 42, 0.85), rgba(59, 130, 246, 0.6));
+}
+.hero-content { position: relative; z-index: 2; max-width: 800px; padding: 20px; }
+.hero-content h1 { font-size: 4rem; font-weight: 800; margin-bottom: 1rem; letter-spacing: -1px; text-shadow: 2px 2px 10px rgba(0,0,0,0.3); }
+.hero-content p { font-size: 1.3rem; margin-bottom: 2.5rem; opacity: 0.9; }
+
+.search-box-container { background: rgba(255,255,255,0.2); padding: 10px; border-radius: 60px; display: inline-block; backdrop-filter: blur(10px); }
+.search-box {
+    background: white; padding: 5px; border-radius: 50px; display: flex; align-items: center; width: 100%; max-width: 600px;
+}
+.search-icon { color: var(--text-light); margin-left: 20px; font-size: 1.1rem; }
+.search-box input { flex: 1; border: none; padding: 15px; outline: none; font-size: 1rem; }
+.search-box button {
+    background: var(--sunset-orange); color: white; border: none; padding: 15px 40px;
+    border-radius: 50px; font-weight: 600; cursor: pointer; font-size: 1.1rem; transition: 0.3s;
+}
+.search-box button:hover { background: #ea580c; }
+
+/* --- General Layout --- */
+.container { padding: 5rem 5%; }
+.section-title {
+    font-size: 2.5rem; color: var(--royal-blue); text-align: center; margin-bottom: 1rem;
+    position: relative; display: inline-block; left: 50%; transform: translateX(-50%);
+}
+.section-title::after {
+    content: ''; display: block; width: 60%; height: 4px; background: var(--sunset-orange);
+    margin: 10px auto 0; border-radius: 2px;
+}
+.section-subtitle { text-align: center; color: var(--text-light); margin-bottom: 4rem; font-size: 1.1rem; }
+.grid { display: grid; gap: 30px; }
+
+/* --- Colorful Categories --- */
+.category-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); gap: 20px; text-align: center;
+}
+.cat-item {
+    background: white; padding: 25px 15px; border-radius: 20px; cursor: pointer; transition: 0.4s;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05); border: 2px solid transparent;
+}
+.cat-item i { font-size: 2.5rem; margin-bottom: 15px; display: block; transition: 0.3s;}
+.cat-item p { font-weight: 600; color: var(--text-dark); }
+
+/* Individual Category Colors */
+.c-pizza i { color: #FF6347; } .c-pizza:hover { border-color: #FF6347; background: #fff1ef; box-shadow: 0 15px 30px rgba(255, 99, 71, 0.2); }
+.c-burger i { color: #FFD700; } .c-burger:hover { border-color: #FFD700; background: #fffde6; box-shadow: 0 15px 30px rgba(255, 215, 0, 0.2); }
+.c-indian i { color: #FF8C00; } .c-indian:hover { border-color: #FF8C00; background: #fff4e6; box-shadow: 0 15px 30px rgba(255, 140, 0, 0.2); }
+.c-asian i { color: #FF69B4; } .c-asian:hover { border-color: #FF69B4; background: #ffeef7; box-shadow: 0 15px 30px rgba(255, 105, 180, 0.2); }
+.c-dessert i { color: #00CED1; } .c-dessert:hover { border-color: #00CED1; background: #e6ffff; box-shadow: 0 15px 30px rgba(0, 206, 209, 0.2); }
+.c-drinks i { color: #9370DB; } .c-drinks:hover { border-color: #9370DB; background: #f3eaff; box-shadow: 0 15px 30px rgba(147, 112, 219, 0.2); }
+
+
+/* --- Restaurant Cards (AI Style) --- */
+.restaurant-grid { grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); }
+.card {
+    background: white; border-radius: 24px; overflow: hidden; transition: 0.3s ease-in-out;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.08); border: 1px solid rgba(0,0,0,0.05);
+}
+.card:hover { transform: translateY(-10px); box-shadow: 0 25px 50px rgba(15, 23, 42, 0.15); }
+.img-holder { position: relative; height: 220px; }
+.img-holder img { width: 100%; height: 100%; object-fit: cover; }
+.discount-tag {
+    position: absolute; top: 20px; left: -10px; background: var(--sunset-orange); color: white;
+    padding: 5px 15px; font-size: 0.9rem; font-weight: 700; border-radius: 0 50px 50px 0;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+}
+.card-info { padding: 20px; }
+.rest-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
+.rest-header h4 { font-size: 1.3rem; color: var(--text-dark); }
+.rating-badge { background: #16a34a; color: white; padding: 4px 10px; border-radius: 12px; font-weight: 700; font-size: 0.9rem; }
+.cuisine-type { color: var(--text-light); margin-bottom: 20px; font-size: 0.95rem; }
+.rest-footer { display: flex; justify-content: space-between; color: var(--text-dark); font-weight: 600; font-size: 0.9rem; border-top: 1px solid #eee; padding-top: 15px;}
+
+/* --- Promo Banner --- */
+.promo-banner {
+    display: flex; background: linear-gradient(to right, var(--royal-blue), #243c5a);
+    color: white; overflow: hidden; margin: 2rem 0;
+}
+.promo-visual { flex: 1; position: relative; min-height: 400px;}
+.promo-visual img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
+.promo-content {
+    flex: 1; padding: 5rem; display: flex; flex-direction: column; justify-content: center;
+}
+.promo-content span { color: var(--gold-pop); letter-spacing: 2px; font-weight: 700; margin-bottom: 1rem;}
+.promo-content h2 { font-size: 3rem; line-height: 1.2; margin-bottom: 1.5rem; background: linear-gradient(to right, #fff, var(--gold-pop)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;}
+.promo-content p { font-size: 1.2rem; opacity: 0.9; margin-bottom: 2rem; }
+.cta-btn {
+    padding: 18px 40px; background: var(--sunset-orange); color: white; border: none;
+    font-weight: 700; border-radius: 50px; font-size: 1.1rem; cursor: pointer; align-self: flex-start;
+    box-shadow: 0 10px 25px rgba(249, 115, 22, 0.5); transition: 0.3s;
+}
+.cta-btn:hover { transform: scale(1.05); background: var(--gold-pop); color: var(--royal-blue); }
+
+/* --- Popular Food Cards --- */
+.food-grid { grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); }
+.food-item {
+    background: white; border-radius: 24px; overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.06); transition: 0.3s;
+}
+.food-item:hover { transform: translateY(-5px); box-shadow: 0 20px 40px rgba(59, 130, 246, 0.15); }
+.food-item img { width: 100%; height: 200px; object-fit: cover; border-bottom: 3px solid var(--bg-cream);}
+.food-details { padding: 20px; }
+.food-details h5 { font-size: 1.2rem; color: var(--royal-blue); margin-bottom: 8px; }
+.food-desc { color: var(--text-light); font-size: 0.9rem; margin-bottom: 20px; }
+.price-action { display: flex; justify-content: space-between; align-items: center; }
+.price { font-size: 1.4rem; color: var(--text-dark); font-weight: 800; }
+.add-btn {
+    background: white; color: var(--sunset-orange); border: 2px solid var(--sunset-orange);
+    padding: 8px 20px; border-radius: 30px; font-weight: 700; cursor: pointer; transition: 0.3s; display: flex; align-items: center; gap: 5px;
+}
+.add-btn:hover { background: var(--sunset-orange); color: white; }
+
+/* --- NEW SECTION: Atmosphere Grid --- */
+.atmosphere-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-auto-rows: 250px;
+    grid-auto-flow: dense; /* Helps pack items tight */
+}
+.atmosphere-card {
+    position: relative; border-radius: 20px; overflow: hidden; cursor: pointer;
+}
+/* Making some images taller for a masonry look */
+.atmosphere-card.tall { grid-row: span 2; }
+
+.atmosphere-card img { width: 100%; height: 100%; object-fit: cover; transition: 0.5s; }
+.atmosphere-card:hover img { transform: scale(1.1); }
+
+.atmos-overlay {
+    position: absolute; bottom: 0; left: 0; width: 100%; padding: 20px;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+    color: white; transform: translateY(100%); transition: 0.3s;
+}
+.atmosphere-card:hover .atmos-overlay { transform: translateY(0); }
+.atmos-overlay h4 { font-size: 1.4rem; font-weight: 600; }
+
+
+/* --- Footer --- */
+footer { background: var(--royal-blue); color: #94a3b8; padding: 5rem 5% 2rem; }
+.footer-content { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 4rem; margin-bottom: 3rem; }
+.footer-brand p { margin: 1.5rem 0; max-width: 300px; }
+.socials i { font-size: 1.5rem; margin-right: 1.5rem; color: white; cursor: pointer; transition: 0.3s; }
+.socials i:hover { color: var(--sunset-orange); }
+.footer-links h4 { color: white; margin-bottom: 1.5rem; font-size: 1.2rem; }
+.footer-links ul { list-style: none; }
+.footer-links li { margin-bottom: 1rem; cursor: pointer; transition: 0.3s; }
+.footer-links li:hover { color: var(--sunset-orange); padding-left: 5px; }
+.copyright { text-align: center; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 2rem; font-size: 0.9rem; }
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .nav-links { display: none; }
+    .hamburger { display: block; }
+    .hero-content h1 { font-size: 2.8rem; }
+    .promo-banner { flex-direction: column; }
+    .promo-visual { min-height: 250px; }
+    .promo-content { padding: 3rem 2rem; }
+    .footer-content { grid-template-columns: 1fr; gap: 2rem; }
+}
