@@ -1,3 +1,44 @@
+/* ============================= */
+/* GLOBAL VARIABLES */
+/* ============================= */
+:root {
+
+    /* ===== COLORS ===== */
+    --primary-color: #ff6b6b;
+    --dark-color: #292929;
+    --light-dark: #1f1f1f;
+    --white-color: #ffffff;
+    --gray-bg: #f7f7f7;
+    --border-color: #cccccc;
+
+    /* ===== FONT ===== */
+    --main-font: 'Poppins', sans-serif;
+
+    /* ===== FONT SIZES ===== */
+    --logo-size: 24px;
+    --hero-heading-size: 3.5rem;
+    --normal-font-size: 16px;
+
+    /* ===== SPACING ===== */
+    --section-padding: 80px 20px;
+    --container-width: 1200px;
+    --small-padding: 20px;
+    --button-padding: 15px 40px;
+
+    /* ===== BORDER RADIUS ===== */
+    --radius-small: 10px;
+    --radius-round: 20px;
+    --radius-pill: 30px;
+
+    /* ===== SHADOWS ===== */
+    --shadow-light: 0 2px 10px rgba(0,0,0,0.05);
+    --shadow-medium: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+
+/* ============================= */
+/* RESET */
+/* ============================= */
 * {
     margin: 0;
     padding: 0;
@@ -5,36 +46,40 @@
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
-    color: #292929;
+    font-family: var(--main-font);
+    font-size: var(--normal-font-size);
+    color: var(--dark-color);
 }
 
+
+/* ============================= */
 /* HEADER */
+/* ============================= */
 header {
     position: fixed;
     width: 100%;
-    background: white;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    background: var(--white-color);
+    box-shadow: var(--shadow-light);
     z-index: 1000;
 }
 
 .navbar {
-    max-width: 1200px;
+    max-width: var(--container-width);
     margin: auto;
-    padding: 20px;
+    padding: var(--small-padding);
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 .logo {
-    font-size: 24px;
+    font-size: var(--logo-size);
     font-weight: 700;
-    color: #ff6b6b;
+    color: var(--primary-color);
 }
 
 .logo span {
-    color: #292929;
+    color: var(--dark-color);
 }
 
 .nav-links {
@@ -45,36 +90,39 @@ header {
 
 .nav-links a {
     text-decoration: none;
-    color: #292929;
+    color: var(--dark-color);
     font-weight: 500;
 }
 
 .nav-links a:hover {
-    color: #ff6b6b;
+    color: var(--primary-color);
 }
 
 .btn-login {
-    background: #292929;
-    color: white;
+    background: var(--dark-color);
+    color: var(--white-color);
     padding: 8px 20px;
-    border-radius: 20px;
+    border-radius: var(--radius-round);
     text-decoration: none;
 }
 
+
+/* ============================= */
 /* HERO */
+/* ============================= */
 .hero {
     height: 100vh;
-    background: linear-gradient(rgba(0,0,0,.4),rgba(0,0,0,.4)),
+    background: linear-gradient(rgba(0,0,0,.4), rgba(0,0,0,.4)),
     url('img/img-4.avif') center/cover;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    color: white;
+    color: var(--white-color);
 }
 
 .hero h1 {
-    font-size: 3.5rem;
+    font-size: var(--hero-heading-size);
 }
 
 .hero p {
@@ -83,28 +131,34 @@ header {
 }
 
 .btn-main {
-    background: #ff6b6b;
-    color: white;
-    padding: 15px 40px;
-    border-radius: 30px;
+    background: var(--primary-color);
+    color: var(--white-color);
+    padding: var(--button-padding);
+    border-radius: var(--radius-pill);
     text-decoration: none;
     font-weight: 600;
 }
 
+
+/* ============================= */
 /* STATS */
+/* ============================= */
 .stats {
     display: flex;
     justify-content: space-around;
-    background: #ff6b6b;
-    color: white;
+    background: var(--primary-color);
+    color: var(--white-color);
     padding: 60px 20px;
     text-align: center;
 }
 
+
+/* ============================= */
 /* DESTINATIONS */
+/* ============================= */
 .destinations {
-    padding: 80px 20px;
-    max-width: 1200px;
+    padding: var(--section-padding);
+    max-width: var(--container-width);
     margin: auto;
 }
 
@@ -115,15 +169,15 @@ header {
 
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 30px;
 }
 
 .card {
-    background: white;
-    border-radius: 10px;
+    background: var(--white-color);
+    border-radius: var(--radius-small);
     overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    box-shadow: var(--shadow-medium);
 }
 
 .card img {
@@ -133,18 +187,21 @@ header {
 }
 
 .card-content {
-    padding: 20px;
+    padding: var(--small-padding);
 }
 
 .price {
-    color: #ff6b6b;
+    color: var(--primary-color);
     font-weight: 700;
 }
 
+
+/* ============================= */
 /* BOOKING */
+/* ============================= */
 .booking {
-    background: #f7f7f7;
-    padding: 80px 20px;
+    background: var(--gray-bg);
+    padding: var(--section-padding);
     text-align: center;
 }
 
@@ -159,63 +216,72 @@ header {
 .booking-form input,
 .booking-form button {
     padding: 15px;
-    border-radius: 25px;
-    border: 1px solid #ccc;
+    border-radius: var(--radius-round);
+    border: 1px solid var(--border-color);
 }
 
 .booking-form button {
-    background: #ff6b6b;
-    color: white;
+    background: var(--primary-color);
+    color: var(--white-color);
     border: none;
 }
 
+
+/* ============================= */
 /* TESTIMONIALS */
+/* ============================= */
 .testimonials {
-    padding: 80px 20px;
+    padding: var(--section-padding);
     text-align: center;
 }
 
 .testimonial-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 30px;
     max-width: 1000px;
     margin: auto;
 }
 
 .testimonial {
-    background: white;
+    background: var(--white-color);
     padding: 25px;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    border-radius: var(--radius-small);
+    box-shadow: var(--shadow-medium);
 }
 
+
+/* ============================= */
 /* NEWSLETTER */
+/* ============================= */
 .newsletter {
-    background: #292929;
-    color: white;
+    background: var(--dark-color);
+    color: var(--white-color);
     text-align: center;
     padding: 70px 20px;
 }
 
 .newsletter-form input {
     padding: 15px;
-    border-radius: 25px;
+    border-radius: var(--radius-round);
     border: none;
 }
 
 .newsletter-form button {
     padding: 15px 30px;
-    border-radius: 25px;
+    border-radius: var(--radius-round);
     border: none;
-    background: #ff6b6b;
-    color: white;
+    background: var(--primary-color);
+    color: var(--white-color);
 }
 
+
+/* ============================= */
 /* FOOTER */
+/* ============================= */
 footer {
-    background: #1f1f1f;
-    color: white;
+    background: var(--light-dark);
+    color: var(--white-color);
     text-align: center;
     padding: 20px;
 }
